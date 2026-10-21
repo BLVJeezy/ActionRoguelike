@@ -30,6 +30,10 @@ public:
     UFUNCTION(BlueprintPure, Category="Four Nations|Bending")
     EFourNationsElement GetElement() const { return Element; }
 
+    /** Tag for the bending action, e.g. Action.Bending.Fire. */
+    UFUNCTION(BlueprintPure, Category="Four Nations|Bending")
+    FGameplayTag GetBendingActionTag() const;
+
 protected:
     UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category="Four Nations|Bending")
     EFourNationsElement Element = EFourNationsElement::Air;
